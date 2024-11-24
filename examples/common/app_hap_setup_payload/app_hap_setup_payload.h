@@ -9,6 +9,10 @@
 #include <esp_err.h>
 #include <hap.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Show the HAP Setup payload
  *
  * This shows the setup paylod in a QR code
@@ -22,3 +26,7 @@
  * @return ESP_FAIL on failure.
  */
 esp_err_t app_hap_setup_payload(char *setup_code, char *setup_id, bool wac_support, hap_cid_t cid);
+
+#ifdef __cplusplus
+}
+#endif
